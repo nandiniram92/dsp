@@ -3,6 +3,16 @@
 
 
 def match_ends(words):
+    c = 0
+    for s in words:
+        l = len(s)
+        if len(s) >= 2:
+            if s[0] == s[-1]:
+                c+=1
+    return c
+            
+        
+
     """
     Given a list of strings, return the count of the number of strings
     where the string length is 2 or more and the first and last chars
@@ -19,6 +29,14 @@ def match_ends(words):
 
 
 def front_x(words):
+    newlist = sorted(words)
+    l = len(words)
+    for i in range l:
+        
+        
+    
+    
+    
     """
     Given a list of strings, return a list with the strings in sorted
     order, except group all the strings that begin with 'x' first.
@@ -36,6 +54,8 @@ def front_x(words):
 
 
 def sort_last(tuples):
+    s = sorted(tuples, key = lambda t:t[-1])
+    return s
     """
     Given a list of non-empty tuples, return a list sorted in
     increasing order by the last element in each tuple.
@@ -53,6 +73,11 @@ def sort_last(tuples):
 
 
 def remove_adjacent(nums):
+    l = len(nums)
+    for i in range(l):
+        if nums[i]==nums[i+1]:
+            del nums[i]
+    return nums
     """
     Given a list of numbers, return a list where all adjacent equal
     elements have been reduced to a single element, so [1, 2, 2, 3]
@@ -72,6 +97,10 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
+    list1.sort()
+    list2.sort()
+    s = sorted(list1 +list2)
+    return s
     """
     Given two lists sorted in increasing order, create and return a
     merged list of all the elements in sorted order. You may modify
