@@ -3,6 +3,12 @@
 
 
 def donuts(count):
+    if count < 10:
+        s = (' '.join('Number of donuts:',string(count)))
+        return s
+    else 
+        ss = 'Number of donuts: many'
+        return ss
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -22,6 +28,12 @@ def donuts(count):
 
 
 def both_ends(s):
+    if len(s) < 2
+        sw = ''
+        return sw
+    sspl = ''.join(s[0:2],s[-1:-3])
+    return sspl
+                                
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -41,6 +53,17 @@ def both_ends(s):
 
 
 def fix_start(s):
+    ss = ''
+    ss.append(s[0])
+    l = len(s)
+    for i in range(1:l):
+        if s[i]==s[0]:
+            ss[i] = '*'
+        else 
+            ss[i] = s[i]
+    return ss
+            
+        
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -60,6 +83,9 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    c = b[0:2] + a[2:]
+    d = a[0:2] + b[2:]
+    return ' '.join(c,d)
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
@@ -78,6 +104,15 @@ def mix_up(a, b):
 
 
 def verbing(s):
+    if len(s) < 3:
+        return s
+    if s[-3:-1] == 'ing'
+        s.extend('ly')
+        return s
+    
+    s.extend('ing')
+    return s
+   
     """
     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
@@ -115,6 +150,23 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    l = len(a)
+    k = len(b)
+    if l%2 == 0:
+        as = a[0:l/2]
+        ad = a[l/2:l]
+    else
+        as = a[0:(l/2 +1)]
+        ad = a[(l/2 +1):l]
+    if k%2 == 0:
+        bs = b[0:l/2]
+        bd = b[l/2:l]
+    else
+        bs = b[0:(l/2 +1)]
+        bd = b[(l/2 +1):l]
+    s = ''.join(as,bs,ad,bd)
+    return s
+        
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
